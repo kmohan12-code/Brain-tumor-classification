@@ -1,7 +1,6 @@
 # Brain Tumor Classification from MRI images using ResNet 50 Model
 
 
-
 ### Project Highlights
 <pre>
 1. Detected Brain tumors in Brain MRI images using Finetuned ResNet-50 model with 5712 training images (Glioma : 1321 images, Meningioma : 1339 images, Pituitary: 1457 images, No Tumor/Healthy: 1595).
@@ -10,7 +9,7 @@
 
 #### Dataset
 <pre>
-Dataset    : <a href=https://drive.google.com/drive/folders/1Pj61qQNfG1Ea7jTD8PK-COXc7MEHbfyo?usp=sharing>Brain Tumor MRI Dataset </a>                  
+Dataset    : <a href=https://drive.google.com/file/d/1tVOMxFYq-gIa5haFbT-96W_8WRZA9Erq/view?usp=sharing>Brain Tumor MRI Dataset </a>                  
 </pre>
 The sample images of Glioma, Meningioma, Pituitary and Normal patients are shown in figure below:
 ![Image of Brain MRI](https://i.ibb.co/sH3g2Vz/bt1.png)
@@ -38,8 +37,3 @@ Sensitivity (Normal)                             : 100%
 F1-score                                         : 99.00%
 AUC                                              : 1.0
 </pre>
-=sharing>Brain Tumor MRI Dataset </a>                  
-</pre>
-
-                          Testing    : 1311 
- 
