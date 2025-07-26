@@ -1,5 +1,8 @@
 # Brain Tumor Classification using YOLO
 
+This project can be deployed as an interactive web app using Gradio and hosted on Hugging Face Spaces. Visit the live demo here:
+🔗 Brain Tumor Detection Web App
+
 This repository contains code and resources for detecting brain tumors using the YOLO (You Only Look Once) object detection model. The project leverages the ultralytics YOLO library to train and evaluate a custom model on a brain tumor dataset.
 
 ## Table of Contents
