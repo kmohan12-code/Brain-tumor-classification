@@ -1,77 +1,83 @@
-# Brain Tumor (updated version )
 
-This project can be deployed as an interactive web app using Gradio and hosted on Hugging Face Spaces. Visit the live demo here:
-Demo--- https://vtu23089-braintumorclassification.hf.space/?__theme=system
+# Brain Tumor Classification
 
-This repository contains code and resources for detecting brain tumors using the YOLO (You Only Look Once) object detection model. The project leverages the ultralytics YOLO library to train and evaluate a custom model on a brain tumor dataset.
-
-## Table of Contents
-- [Installation](#installation)
-- [Dataset](#dataset)
-- [Training](#training)
-- [Inference](#inference)
-- [Results Visualization](#results-visualization)
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Acknowledgments](#acknowledgments)
-
-
-## Installation
-
-
-1. Install the required Python libraries:
-    ```bash
-    pip install -r requirements.txt
-    ```
+Check out my project [here]( https://vtu23089-braintumor-classification.hf.space/?__theme=system)!
 
 
 
-## Training
-To train the YOLO model, ensure you have configured a YAML file with paths to your training and validation data. Example command to train:
+This is a **Deep Learning-based Brain Tumor Classification** application built with **Keras**, **TensorFlow**, and **Gradio**. It classifies MRI images into one of four categories:
 
-```python
-from ultralytics import YOLO
-model = YOLO('yolov8n.pt')
-model.train(data='data.yaml', epochs=50, imgsz=640)
-```
+- Glioma
+- Meningioma
+- No Tumor
+- Pituitary Tumor
 
-## Inference
-To run inference on an image:
-```python
-from ultralytics import YOLO
+The  uses a **ResNet50-based CNN** model trained on a custom dataset of brain MRI images.
 
-trained_model = YOLO('path/to/best.pt')
-results = trained_model('path/to/image.png')
-```
+---
 
-## Results Visualization
-Use Matplotlib to visualize results:
-```python
-import matplotlib.pyplot as plt
+## Features
 
-image_array = results[0].plot()
-plt.imshow(image_array)
-plt.axis('off')
-plt.show()
-```
+- Upload an MRI image and get instant prediction.
+- Shows **probability for each class**.
+- Preprocessing includes noise reduction and color mapping for MRI images.
+- Data augmentation was applied during training to improve model generalization.
 
-## Requirements
-- Python 3.8 or higher
-- Libraries: ultralytics, matplotlib, pillow
 
-Install all dependencies using:
-```bash
-pip install -r requirements.txt
-```
 
 ## Usage
-1. Train the YOLO model using your dataset.
-2. Perform inference on new images to detect brain tumors.
-3. Visualize and analyze the results.
 
+1. Open the app interface.
+2. Upload an MRI image.
+3. View the predicted class and probabilities.
 
+Example:
 
-Feel free to contribute to this project by submitting issues or pull requests!"
-}
+| Input Image | Prediction   |
+| ----------- | ------------ |
+| MRI Scan    | Glioma (95%) |
 
+---
+
+## Confusion Matrix
+
+The model was evaluated on the test dataset, and the confusion matrix shows how well it performed:
+
+![Confusion Matrix](confusion_matrix.png) *(optional: include if saved as image)*
+
+Classification metrics:
+
+* Accuracy
+* Precision
+* Recall
+* F1-score
+
+---
+
+## Model
+
+* **Architecture:** ResNet50 (pretrained on ImageNet) + custom classification head
+* **Input size:** 150x150 (preprocessed)
+* **Output:** Softmax probabilities for 4 classes
+* **Training:** Data augmentation applied, EarlyStopping, ReduceLROnPlateau callbacks used
+* **Saved model:** `best_brain_tumor_model.keras`
+
+---
+
+## Dataset
+
+* Custom brain MRI dataset split into:
+
+  * Training
+  * Validation
+  * Testing
+* Classes: `glioma`, `meningioma`, `notumor`, `pituitary`
+* MRI preprocessing: bilateral filter + bone color map + resizing
+
+---
+
+## Deployment
+
+* Can be deployed directly on **Hugging Face Spaces** with `app.py` and `best_brain_tumor_model.keras`.
+* Uses **Gradio** interface for interactive predictions.
 
