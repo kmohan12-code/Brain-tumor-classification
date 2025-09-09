@@ -1,7 +1,7 @@
 
 # Brain Tumor Classification
 
-Check out my project [here]( https://vtu23089-braintumor-classification.hf.space/?__theme=system)!
+Check out my project [here] https://vtu23089-braintumor-classification.hf.space/?__theme=system
 
 
 
@@ -43,7 +43,7 @@ Example:
 
 The model was evaluated on the test dataset, and the confusion matrix shows how well it performed:
 
-![Confusion Matrix](confusion_matrix.png) *(optional: include if saved as image)*
+
 
 Classification metrics:
 
@@ -73,8 +73,6 @@ Classification metrics:
   * Testing
 * Classes: `glioma`, `meningioma`, `notumor`, `pituitary`
 * MRI preprocessing: bilateral filter + bone color map + resizing
-
----
 
 ## Deployment
 
