@@ -1,3 +1,6 @@
-ultralytics
-Augmentor
-gradio 
+ensorflow
+opencv-python
+numpy
+gradio
+matplotlib
+seaborn
