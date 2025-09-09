@@ -1,4 +1,4 @@
-# Brain Tumor Classification (updated version )
+# Brain Tumor (updated version )
 
 This project can be deployed as an interactive web app using Gradio and hosted on Hugging Face Spaces. Visit the live demo here:
 Demo--- https://vtu23089-braintumorclassification.hf.space/?__theme=system
