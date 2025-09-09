@@ -1,4 +1,4 @@
-# Brain Tumor Classification using YOLO
+# Brain Tumor Classification (updated version )
 
 This project can be deployed as an interactive web app using Gradio and hosted on Hugging Face Spaces. Visit the live demo here:
 🔗 Brain Tumor Detection Web App --- https://vtu23089-braintumorclassification.hf.space/?__theme=system
